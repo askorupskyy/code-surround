@@ -1,0 +1,66 @@
+{
+  "name": "code-surround",
+  "version": "0.0.1",
+  "description": "VSCode extension to surround your code with various characters or tags.",
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "package": "vsce package"
+  },
+  "keywords": [
+    "vscode",
+    "code",
+    "surround",
+    "plugin"
+  ],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Other"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "surround.add",
+        "title": "Surround: Add"
+      },
+      {
+        "command": "surround.remove",
+        "title": "Surround: Remove"
+      },
+      {
+        "command": "surround.change",
+        "title": "Surround: Change"
+      }
+    ]
+  },
+  "keybindings": [
+    {
+      "command": "surround.add",
+      "key": "cmd+s+a",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "surround.remove",
+      "key": "cmd+s+d",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "surround.change",
+      "key": "cmd+s+r",
+      "when": "editorTextFocus"
+    }
+  ],
+  "author": "askorupskyy",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/json": "^0.13.2",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vscode": "^1.1.37"
+  }
+}
