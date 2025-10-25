@@ -14,10 +14,16 @@
     "surround",
     "plugin"
   ],
+  "publisher": "askorupskyy",
   "engines": {
     "vscode": "^1.90.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/askorupskyy/code-surround"
+  },
   "categories": ["Other"],
+  "activationEvents": ["onCommand:surround.add","onCommand:surround.remove","onCommand:surround.change"],
   "contributes": {
     "commands": [
       {
